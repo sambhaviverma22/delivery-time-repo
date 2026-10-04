@@ -16,7 +16,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
-a change
 # Baseline: always guess the average
 baseline_pred = np.full(len(y_test), y_train.mean())
 baseline_mae = mean_absolute_error(y_test, baseline_pred)
